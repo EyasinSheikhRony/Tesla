@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto+Slab:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Roboto Slab', serif;
+}
+
+@layer components {
+  .nav_bar {
+    @apply flex justify-between md:justify-around px-3 py-2 md:px-0 items-center z-10 bg-transparent fixed top-0 left-0 right-0
+  }
+  .nav_menu {
+    @apply py-2 px-4 rounded-lg hover:bg-blue-100 hidden xl:flex font-medium text-gray-800
+  }
+  .nav_menu-2 {
+    @apply py-2 px-4 rounded-lg xl:hover:bg-blue-100 max-[1279px]:bg-blue-100 lg:mx-1 font-semibold text-gray-800 border-none outline-none
+  }
+  .car_section {
+    @apply w-full h-screen
+  }
+  .car_model {
+    @apply absolute top-[20%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center
+  }
+  .car_image {
+    @apply w-full h-full object-cover
+  }
+  .model {
+    @apply font-medium text-[45px] text-gray-800 max-[1280px]:text-[30px]
+  }
+  .dis {
+    @apply underline font-normal mt-8
+  }
+  .buy_section {
+    @apply absolute top-[86%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center flex justify-center 
+  }
+  .buy_items{
+    @apply bg-[#3F4144] text-white font-semibold rounded-md py-3 px-10 md:px-24
+  }
+  .next {
+    @apply bg-gray-200 text-[#3F4144] font-semibold rounded-md py-3 px-4 md:px-16 mt-36
+  }
+  .arrow_btn {
+    @apply absolute top-[94%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center animate-bounce
+  }
+  .snap_future {
+    @apply snap-always snap-start relative w-full h-screen
+  }
+  .main_snap_future {
+    @apply snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden transition-all ease-in-out scroll-smooth duration-1000
+  }
+}
